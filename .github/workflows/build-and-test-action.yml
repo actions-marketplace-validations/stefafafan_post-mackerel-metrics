@@ -10,7 +10,7 @@ jobs:
   build: # make sure build/ci work properly
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - run: |
           npm install
       - run: |
@@ -18,7 +18,7 @@ jobs:
   test-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - id: post-to-mackerel
         uses: ./
         with:
@@ -30,7 +30,7 @@ jobs:
   test-multiple-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - id: current-time
         run: echo "epoch=$(date +%s)" >> $GITHUB_OUTPUT
       - id: post-to-mackerel
@@ -45,7 +45,7 @@ jobs:
   test-input-validation:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: set only metric-name
         uses: ./
         with:
