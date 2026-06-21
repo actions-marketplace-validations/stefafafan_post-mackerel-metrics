@@ -9,7 +9,7 @@ jobs:
   count-and-post:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
       - id: count-lines-yml
         name: count lines of Workflow code
